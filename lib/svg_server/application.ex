@@ -3,7 +3,7 @@ defmodule SvgServer.Application do
 
   def start(_type, _args) do
     children = [
-      {Plug.Cowboy, scheme: :http, plug: SvgServer.Router, options: [port: 3000]}
+      {Plug.Cowboy, scheme: :http, plug: SvgServer.Router, options: [port: 8000]}
     ]
 
     opts = [strategy: :one_for_one, name: SvgServer.Supervisor]
